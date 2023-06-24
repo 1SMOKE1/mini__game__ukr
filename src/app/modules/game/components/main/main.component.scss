@@ -1,0 +1,16 @@
+@import 'mixins';
+
+main{
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background: rgb(2,0,36);
+  background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(45,125,86,1) 62%, rgba(94,0,255,1) 100%);
+}
+
+.container{
+  @include container();
+  margin-bottom: 15%;
+}
+
+

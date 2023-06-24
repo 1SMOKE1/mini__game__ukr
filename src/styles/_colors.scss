@@ -1,0 +1,28 @@
+//COLORS
+
+$c1: rgb(77, 77, 228);
+$c2: rgb(224, 224, 24);
+$c3: rgb(31, 160, 31);
+$c4: rgb(209, 58, 58);
+$c5: #fff;
+
+
+//classes for color and background
+
+@each $number,
+  $hex
+    in (
+      1: $c1,
+      2: $c2,
+      3: $c3,
+      4: $c4,
+      5: $c5
+    )
+{
+  .c#{$number} {
+    color: $hex;
+  }
+  .bg#{$number} {
+    background-color: $hex;
+  }
+}

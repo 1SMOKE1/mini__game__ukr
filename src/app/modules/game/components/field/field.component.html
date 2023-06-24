@@ -1,0 +1,8 @@
+<div *ngFor="let raw of gameFieldService.gameField; let i = index">
+  <button 
+    class="btn bg1" 
+    *ngFor="let col of raw; let j = index"
+    [ngClass]="getClassOf(col)"
+    (click)="catchField(i, j)"
+    ></button>
+</div>
