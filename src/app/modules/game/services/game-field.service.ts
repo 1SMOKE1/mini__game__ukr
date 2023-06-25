@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { FieldColorsEnum } from '../enums/field-colors.enum';
+import { FieldService } from './field.service';
 
 @Injectable({
   providedIn: 'root'
@@ -19,4 +20,8 @@ export class GameFieldService {
       this.gameField.push(colorFieldsArr);
     }
   }
+
+
+
+
 }

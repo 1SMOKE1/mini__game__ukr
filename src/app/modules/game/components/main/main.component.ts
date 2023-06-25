@@ -9,17 +9,30 @@ import { FieldService } from '../../services/field.service';
 export class MainComponent {
 
   rangeValue: number = 1;
+  changeCondition: boolean = true;
+  delay: number = 0;
 
   constructor(
     private readonly fieldService: FieldService
   ){}
 
   public startGame(): void{
-    console.log(this.rangeValue)
-    this.fieldService.startGame(0, 9, 1, this.rangeValue);
+    if(this.changeCondition)
+      this.fieldService.startGame(0, 9, 0.5, this.rangeValue);
+    else 
+      this.fieldService.startGame(0, 9, this.delay)
   }
 
-  changeRangeValue(value: number){
+  public changeRangeValue(value: number): void{
     this.rangeValue = value
   }
+
+  public changeDelayCondition(value: boolean): void{
+    this.changeCondition = value;
+  }
+
+  public setDelayValue(value: number): void{
+    this.delay = value;
+  }
+
 }
