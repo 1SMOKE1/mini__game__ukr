@@ -4,7 +4,7 @@
 main{
   display: grid;
   place-items: center;
-  min-height: calc(100vh - 129px);
+  min-height: calc(100vh - 115px);
   background: rgb(2,0,36);
   background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(45,125,86,1) 62%, rgba(94,0,255,1) 100%);
 }
@@ -20,7 +20,7 @@ main{
   
   border-radius: 16px;
   cursor: pointer;
-  margin: 20px 0;
+  margin: 40px 0;
   padding: 10px 20px;
   transition: box-shadow .8s ease, color .8s ease;
   &:hover{

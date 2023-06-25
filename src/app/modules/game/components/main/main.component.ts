@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FieldService } from '../../services/field.service';
+import { DialogService } from '../../services/dialog.service';
+import { GameFieldService } from '../../services/game-field.service';
 
 @Component({
   selector: 'app-main',
@@ -8,30 +10,21 @@ import { FieldService } from '../../services/field.service';
 })
 export class MainComponent {
 
-  rangeValue: number = 1;
-  changeCondition: boolean = true;
-  delay: number = 0;
+  delay: number = 300;
 
   constructor(
-    private readonly fieldService: FieldService
+    public readonly dialogService: DialogService,
+    public readonly gameFieldService: GameFieldService,
+    private readonly fieldService: FieldService,
   ){}
 
   public startGame(): void{
-    if(this.changeCondition)
-      this.fieldService.startGame(0, 9, 0.5, this.rangeValue);
-    else 
-      this.fieldService.startGame(0, 9, this.delay)
-  }
-
-  public changeRangeValue(value: number): void{
-    this.rangeValue = value
-  }
-
-  public changeDelayCondition(value: boolean): void{
-    this.changeCondition = value;
+    this.fieldService.startGame2(0, 9, this.delay)
   }
 
   public setDelayValue(value: number): void{
+    if(value < this.delay)
+      return;
     this.delay = value;
   }
 

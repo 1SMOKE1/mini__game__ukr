@@ -1,0 +1,13 @@
+<div class="overlay" (click)="closeDialog()"></div>
+<div class="container">
+  <div class="header">
+    Підтвердіть дію
+  </div>
+  <div class="content">
+    <p>{{gameFieldService.answer.emoji}}</p>
+    <p class="text">{{gameFieldService.answer.text}}</p>
+  </div>
+  <div class="actions">
+    <button class="actions-btn" (click)="closeDialog()">Закрити</button>
+  </div>
+</div>

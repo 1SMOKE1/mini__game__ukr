@@ -1,8 +1,9 @@
-<app-user-interface (rangeValueE)="changeRangeValue($event)" (delayConditionE)="changeDelayCondition($event)" (delayValueE)="setDelayValue($event)"></app-user-interface>
+<app-dialog *ngIf="dialogService.showDialog" ></app-dialog>
+<app-user-interface (delayValueE)="setDelayValue($event)"></app-user-interface>
 <main>
   <div class="container">
     <div class="btn-start__wrap">
-      <button class="btn-start bg2" (click)="startGame()">Start</button>
+      <button class="btn-start bg2" (click)="startGame()" [disabled]="gameFieldService.startBtn">Start</button>
     </div>
     <app-field></app-field>
   </div>

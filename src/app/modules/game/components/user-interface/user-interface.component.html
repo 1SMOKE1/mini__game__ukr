@@ -1,21 +1,7 @@
 <div class="user-interface__wrap">
   <div class="user-interface__controller-wrap">
-    <p>Кількість секунд затримки (від 0.5  до {{rangeValue}} секунд)</p>
-    <input type="range" min="0.5" max="3" step="0.1" [value]="rangeValue" (input)="changeRangeValue($event)">
-    <p>{{rangeValue}}</p>
   </div>
   <div class="user-interface__content bg5">
-    <div class="user-interface__choose-delay" (change)="changeDelay($event)">
-      <div class="input-wrap">
-        <p>Рандомна затримка з діапазоном</p>
-        <input type="radio"  name="chooseDelay" [value]="1" checked>
-      </div>
-      <div class="input-wrap">
-        <input type="radio" name="chooseDelay" [value]="0" >
-        <p>Фіксована затримка</p>
-      </div>
-      
-    </div>
     <div class="user-interface__points-wrap">
       <p>Компьютер: {{fieldService.AIPoints}}</p>
       <p>Гравець: {{fieldService.playerPoints}}</p>
@@ -24,7 +10,7 @@
   <div class="user-interface__controller-wrap">
     <p>Ввести затримку власноруч</p>
     <div class="user-interface__text-input__wrap">
-      <input (change)="changeMsValue($event)" type="number" value="0" step="100" min="0">
+      <input (change)="changeMsValue($event)" type="number" value="300" step="100" min="0">
       <p class="user-interface__text-input__ms">ms.</p>
     </div>
   </div>
