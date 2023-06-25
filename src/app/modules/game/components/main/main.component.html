@@ -1,6 +1,9 @@
+<app-user-interface (rangeValueE)="changeRangeValue($event)"></app-user-interface>
 <main>
-  <app-user-interface></app-user-interface>
   <div class="container">
+    <div class="btn-start__wrap">
+      <button class="btn-start bg2" (click)="startGame()">Start</button>
+    </div>
     <app-field></app-field>
   </div>
 </main>

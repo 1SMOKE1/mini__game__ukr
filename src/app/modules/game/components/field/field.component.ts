@@ -20,7 +20,6 @@ export class FieldComponent implements OnInit{
 
   ngOnInit(): void {
     this.gameFieldService.initGameField();
-    this.fieldService.startGame();
   }
 
   
@@ -46,6 +45,7 @@ export class FieldComponent implements OnInit{
     const field = this.gameFieldService.gameField[raw][col];
     if(field === this.colorFields.yellow){
       this.gameFieldService.gameField[raw][col] = this.colorFields.player;
+      this.fieldService.addPointToPlayer();
     } 
   }
 
